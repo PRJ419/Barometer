@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Barometer"
-             x:Class="Barometer.MainPage">
+             x:Class="Barometer.MainPageView">
 
     <StackLayout>
         <!-- Place new controls here -->
