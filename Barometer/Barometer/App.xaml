@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Barometer.App">
     <Application.Resources>
-
+        <Style x:Key="MainPageButton" TargetType="{x:Type Button}">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+                <Setter Property="Margin" Value="2"></Setter>
+            </Style.Setters>
+        </Style>
     </Application.Resources>
 </Application>

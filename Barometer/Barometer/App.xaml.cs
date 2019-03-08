@@ -11,7 +11,7 @@ namespace Barometer
         {
             InitializeComponent();
 
-            MainPage = new MainPageView();
+            MainPage = new NavigationPage(new MainPageView());
         }
 
         protected override void OnStart()
