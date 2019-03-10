@@ -84,28 +84,32 @@ namespace Barometer.ViewModels
         }
 
         public void FilterItemsExecute(string obj)
-        {            
-            //switch (obj)
-            //{
-            //    case "Name":
-            //        var tempBarsName = new ObservableCollection<Bar>(Bars.OrderBy(o => o.Name).ToList());
-            //        Bars.Clear();
-            //        Bars = tempBarsName;
-            //        break;
-            //    case "Rating":
+        {
+            List<Bar> tempBars;
 
-            //        Bars.OrderBy(o => o.Rating);
-            //        //Bars.Clear();
-            //        //Bars = tempBarsRating;
-            //        break;
-            //    default:
-            //        throw new InvalidEnumArgumentException("Couldn't find the item");
-            //}
+            switch (obj)
+            {
+                case "Name":
+                    tempBars = Bars.OrderBy(o => o.Name).ToList();
+                    break;
+                case "Rating":
+                    tempBars = Bars.OrderBy(o => o.Rating).ToList();
+                    //Highest rating first
+                    tempBars.Reverse();
+                    break;
+                case "Postal Code":
+                    tempBars = Bars.OrderBy(o => o.PostalCode).ToList();
+                    break;
+                default:
+                    throw new InvalidEnumArgumentException("Couldn't find the item");
+            }
 
-            //foreach (var bar in Bars)
-            //{
-            //    Console.WriteLine(bar.Rating);                
-            //}
+            Bars.Clear();
+
+            foreach (var bar in tempBars)
+            {               
+                Bars.Add(bar);
+            }
         }
 
         #endregion

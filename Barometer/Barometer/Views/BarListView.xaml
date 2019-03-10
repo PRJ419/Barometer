@@ -11,7 +11,7 @@
         <StackLayout Orientation="Horizontal">
             <Picker x:Name="Picker" Title="Filter by:" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Picker.ItemsSource>
-                    <!-- Dette er har codet pt. Ved ikke hvordan jeg lige kommer rundt om det.-->
+                    <!-- Dette er hard codet pt. Ved ikke hvordan jeg lige kommer rundt om det.-->
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Name</x:String>
                         <x:String>Rating</x:String>
@@ -28,7 +28,7 @@
             VerticalOptions="FillAndExpand"
             HasUnevenRows="True"
             RefreshCommand="{Binding LoadItemsCommand}"
-            IsPullToRefreshEnabled="false"
+            IsPullToRefreshEnabled="False"
             >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -53,6 +53,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
     </StackLayout>
 </ContentPage>
