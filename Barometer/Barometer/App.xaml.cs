@@ -1,4 +1,5 @@
 ﻿using System;
+using Barometer.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace Barometer
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPageView());
+            MainPage = new NavigationPage(new BarListView());
         }
 
         protected override void OnStart()
